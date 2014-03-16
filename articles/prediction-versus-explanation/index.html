@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width">
+    <title>Prediction versus Explanation - American Soccer Analysis
+    </title>
+    <link rel="alternate" href="http://americansocceranalysis.com/feed.xml" type="application/rss+xml" title="Numbers">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic|Anonymous+Pro:400,700,400italic,700italic|Merriweather:400,700,300">
+    <link rel="stylesheet" href="/css/main.css">
+  </head>
+  <body class="article-detail">
+    <header class="header">
+      <div class="content-wrap">
+        <h1>Prediction versus Explanation</h1>
+        <p class="author">Written by <span class="author">uoduckfan33</span>
+        </p>
+      </div>
+    </header>
+    <div id="content">
+      <div class="content-wrap">
+        <article class="article">
+          <section class="content"><p>There is a subtle, yet very important, distinction between explanation and prediction in most sports, and Major League Soccer is no different. I don’t intend to make this long or particularly math heavy, so hang on. Here’s a simple example of what I’m talking about when I refer to <strong><em>explanation</em></strong>. In its first six games of the season, the Portland Timbers recorded 89 attempts and allowed just 57 to their opponents. <strong><em>During that same time</em></strong>, Portland scored ten goals while allowing eight. I might <strong><em>explain</em></strong> that the Timbers’ +2 goal differential was due—at least in part—to earning more offensive opportunities than their opponents. Here’s another example, but this time in regards to <strong><em>prediction</em></strong>. In their first six games, the New England Revolution scored two goals while allowing six to its opponents. <strong><em>During its next six games</em></strong>, New England scored eight goals while allowing just three to its opponents. Using just New England as an example, it would seem as though goal scoring in the past (-4) poorly <strong><em>predicted</em></strong> goal scoring in the future (+5).  Of course, we have nineteen teams, not two, so I sorted through all nineteen teams looking for patterns. Here is what I found. A team’s goal differential during its first six games <strong><em>explained</em></strong> its total points over that same time period extremely well (R2 was 77%). This is not surprising. Teams that tend to score more goals than their opponents also tend to win more games. Nothing shocking there. However, a team’s goal differential in the first six games of the season provided no help in <strong><em>predicting</em></strong> its total points over the next six games. Here’s the plot on that&nbsp;one: </p>
+<p><img src="http://americansocceranalysis.files.wordpress.com/2013/06/gd-vs-future-points-6-weeks-2013.jpeg" alt="GD vs. Future Points - 6 weeks 2013"></p>
+<p>There is virtually no relationship between how well a team scored before, and then how many points it earned later. In other words, goal differentials are not predictive over six games. But if you’re convinced the lack of predictive ability is completely due to a small sample size of twelve total games, check this out. A team’s attempts differential in its first six games shows a statistically significant correlation to both its future goal differential and points earned: <img src="http://americansocceranalysis.files.wordpress.com/2013/06/ad-vs-gd-and-ad-vs-pts.jpg" alt="AD vs. GD and AD vs. Pts">   Because it’s sports, prediction is never going to be precise, and these aren’t perfect correlations at all. But I find it particularly impressive that over just twelve total games, the attempts data from a team’s first six games shows statistically significant predictive ability of the team’s results in the next six games. If you’ve listened to our Game-of-the-Week section during our podcasts, you hear us talking a lot about shot ratios. This post hopefully clarified why we do that. Past shot ratios are better than past results at predicting future&nbsp;results.</p>
+</section>
+        </article>
+      </div>
+    </div>
+    <footer>
+      <div class="content-wrap">
+        <div class="nav"><a href="/">« Full blog</a></div>
+        <section class="about"><p>Wintersmith is made by <a href="http://johan-nordberg.com/">Johan Nordberg</a> and licensed under the <a href="http://opensource.org/licenses/MIT">MIT-license</a>.
+This footer text can be edited in about.md</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat.</p>
+<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+dolore eu fugiat nulla pariatur.</p>
+<p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+deserunt mollit anim id est laborum.</p>
+
+        </section>
+        <section class="copy">
+          <p>&copy; 2014 USMNT &mdash; powered by&nbsp;<a href="https://github.com/jnordberg/wintersmith">Wintersmith</a>
+          </p>
+        </section>
+      </div>
+    </footer>
+  </body>
+</html>

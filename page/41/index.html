@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width">
+    <title>The Wintersmith's blog
+    </title>
+    <link rel="alternate" href="http://localhost:8080/feed.xml" type="application/rss+xml" title="Ramblings of an immor(t)al demigod">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic|Anonymous+Pro:400,700,400italic,700italic|Merriweather:400,700,300">
+    <link rel="stylesheet" href="/css/main.css">
+  </head>
+  <body>
+    <header class="header">
+      <div class="content-wrap">
+        <div class="logo">
+          <h1><a href="http://localhost:8080">The Wintersmith's blog</a></h1>
+          <p class="description">Ramblings of an immor(t)al demigod</p>
+        </div>
+      </div>
+    </header>
+    <div id="content">
+      <div class="content-wrap">
+        <article class="article intro">
+          <header>
+            <p class="date"><span>05. May 2013</span></p>
+            <h2><a href="/articles/asa-podcast-episode-five/">ASA Podcast - Episode Five</a></h2>
+          </header>
+          <section class="content"><p>Hello loyal readers/listeners! My apologies for not having this up yesterday, but it’s here now. A 55-min. bit on Markov Chains, Game States, and a preview of the Galaxy vs. Dynamo, while also introducing a new member of the American Soccer Analysis team. Hope you enjoy! [audio <a href="http://americansocceranalysis.files.wordpress.com/2013/05/asa5.mp3">http://americansocceranalysis.files.wordpress.com/2013/05/asa5.mp3</a>]</p>
+
+          </section>
+        </article>
+        <article class="article intro">
+          <header>
+            <p class="date"><span>04. May 2013</span></p>
+            <h2><a href="/articles/game-states-an-introduction/">Game States: An Attempt at an Introduction</a></h2>
+          </header>
+          <section class="content"><p>I’m no mathematician. Matty maybe, but I am not. So when approaching something like Game States, I felt it good to attempt to introduce it with something, though it’s rather ominous and a bit intimidating. So most—if not all—of the information provided is taken from a source who is smarter than I am. That’s really what this blog is all about, finding people who know and understand the principles we are trying to learn and centralize the material and keep it in tidy location where people that are new—-not just to the sport, but also the concept of analytics—-can go to find information and grow their knowledge.  <a href="http://www.sci.brooklyn.cuny.edu/~sklar/teaching/s09/cis3.5/hw/labIII.3.pdf">The idea of game states</a> is that a match will consist of a sequence of states, where each state is defined by a combination or series of events that culminate in creating a new state. Those events give details and help break down the match. They provide context or meaning to the data that we record. Game states, as I understand it, is based upon the idea of the <a href="http://en.wikipedia.org/wiki/Markov_chain">Markov Chains</a>. </p>
+<blockquote>
+<p><em>…[A] mathematical system that undergoes transitions from one state to another, between a finite or countable number of possible states. It is a random process usually characterized as memoryless: the next state depends only on the current state and not on the sequence of events that preceded&nbsp;it.</em></p>
+</blockquote>
+<p>Let’s apply this idea to a&nbsp;sport…</p>
+<blockquote>
+<p><em>In football, if a team is in a certain situation, what happened previously has no effect on what will happen next. For example, if we have a 1<span class="ord">st</span>-and-10 from our own 20, it does not matter if the previous play was a kickoff for a touchback or a 10-yard gain for a first down after a 3<span class="ord">rd</span>-and-10 from the 10-yardline. Either way, we now have a new situation that will only directly affect the next&nbsp;play.</em></p>
+</blockquote>
+<p>To put it all into soccer terminology, if a team has possession of the ball and is progressing past the half-line and into the attacking third it doesn’t matter if they got it on an interception or a goal kick. Regardless of how it happened they now have the ball going into the oppositions attacking third and will have an opportunity to threaten and score. I struggle with this thought because tactically this may not be true—-an individual getting the ball on a break is different than someone participating with a soft building of play in attacking the opposition’s net. Coming from a statistical and memory-less position we simply want the facts. Let’s go to another sport and put this into baseball terms because of the advanced progress that the sport in general has made in analytics. Baseball analytics breaks game states down into four basic concepts: <strong>the score, inning, base runners and outs</strong>. This would be the way you could <a href="http://www.lookoutlanding.com/2010/2/14/1310724/sabremetrics-101-the-game-state">calculate basic run/win expectancy and ratios</a>. </p>
+<blockquote>
+<p><em>If you have the average number of runs expected to score in an inning after any game state, you can figure out how many runs a stolen base is worth, or a triple, or a strikeout. The game state essentially allows us to relate everything that happens on the diamond back to the major currencies of baseball: winning and&nbsp;runs.</em></p>
+</blockquote>
+<p>We’re not talking about baseball. We’re talking about soccer, or for you euro snobs, ‘Fútbol’. However, taking the concepts of an already practically applied matrix, such as baseball and the one that that <a href="http://www.tangotiger.net/RE9902.html">Tom Tango has already developed(see below),</a> can give us ideas on how we can attempt to create a corresponding one in soccer. Soccer has <strong>wins</strong> too—-though I see more people associate points—-but our true currency in this sport is <strong>goals</strong>. Everything leads back to the price or value of a goal. Whether it be a cross or a tackle, the ultimate result of what we want is to be able to understand how things work together to produce goals.Comparing the possible game states; Soccer just—just like in baseball—has a score line that can help give us an idea of the transitions between states. A team being up one goal, or on the other side of the coin being down one goal, can give us a definition of a game state. It’s simplistic, but it works. It also can show us why some times, looking at you Alex Fergueson, teams take less shots than at other times. It would make sense just for the purpose of proper possession. We also have measurement for the length of the game, in that each team will play against one another for a total of 90 minutes. In soccer, we have <strong>time intervals</strong>. The largest problem is that because it’s constantly moving rather than a set static state, such as an inning, it creates a lot of various probabilities and chains. However, if you wanted to mitigate that to an extent you could instead just revert to the basics of using the first half vs. the second half of a match. While these are two big time intervals, when used in conjunction with other specific game states it could continue to help us develop a better understanding of the game. The next one listed is base runners, but I’m going to pass on that and move on to the concept of <strong>outs</strong>. This is something that at very best I can say is a difficult correlation, but if you wanted to attempt one I might try changes in possession. This is a rather poor concept and I have no idea how or if you want to use this… probably not. Baseball limits a team to three attempts to score per their half of the inning rather than having 3 specific possessions or attempts to score. In the first 45 minutes of a half you could have a team with anywhere between 12 and 40 possessions alone depending on who the opponent was and how the team executed its attack. Back to <strong>base runners,</strong> and this is one of the easier things to mimic though I have no way of proving how closely they are related. Shots on goal  conceivably could give us a baseline on the probability of goal scored and, more importantly, the points that are associated with winning or drawing. One additional game state that hasn’t been mentioned and doesn’t really correlate with anything that baseball has, is <strong>yellow and red cards</strong>. While, baseball has ejections it doesn’t necessarily affect the dimensions of the game. However, in soccer it puts the team down a man, rather than being able to just sub in a replacement. These are all elements which you would consider <em>context</em>. How do teams perform during these situations? Do their possessions last longer? Do they take more shots? What are the quality of shots? This is the information and really the purpose behind gathering the data points. Are the Seattle Sounders just as likely to score in a “-1” goal situation as they are in a tie-game? This is all information that we are seeking. The context can provide further details as well as specific entry into how certain aspects and statistics can be properly correlated to goals, and then to points toward the table. I feel like there is more to write about here… and that’s because it’s true. There is a lot more to write about. But this is primarily to cover the basics of game states. We’ll talk more about it in our podcast tomorrow, and we’ll have a follow up post to everything when we start preparing to post <span class="caps">MLS</span> game state&nbsp;information.</p>
+
+            <p class="more"><a href="/articles/game-states-an-introduction/">more</a></p>
+          </section>
+        </article>
+        <article class="article intro">
+          <header>
+            <p class="date"><span>01. May 2013</span></p>
+            <h2><a href="/articles/now-a-thought-on-big-data-and-club-analyst/">Now, A Thought On Big Data And Club Analysis</a></h2>
+          </header>
+          <section class="content"><p>I talked a bit about Big vs. Small data last week—in case you missed it, <a href="http://americansocceranalysis.wordpress.com/2013/04/25/data-big-vs-small/">go back and check it out</a>&#8211;and we kind of talked about how you don’t have to necessarily rely on the revolution of big data. There is a need to make do with what is currently available. However, for many clubs overseas that big data is available, but there are other encumbrances to deal&nbsp;with: </p>
+<blockquote>
+<p>Beyond the complexity and time constraints placed on the analysis, another major obstacle faced in the job – like that faced by so many people entrusted with big data within an organisation, football club or otherwise – is to make data useful, accessible and engaging to colleagues who have little interest or experience in dealing with&nbsp;numbers.</p>
+</blockquote>
+<p>This from a recent<a href="http://www.thebigdatainsightgroup.com/site/article/ben-smith-development-performance-systems-chelsea-fc"> interview with Ben Smith of the development performance systems at Chelsea <span class="caps">FC</span></a>. A club that is often quoted as one of the “big-4” in the English Premier League. It’s important to understand that, while many of these clubs have information at their disposal, few (if any) know or understand the practicality of implementing the information into their planning and preparation phase. If fact, reading back on the ‘Counter Attack’ blog by Richard Whittal, some clubs—i.e. most— <a href="/articles/now-a-thought-on-big-data-and-club-analyst/even%20pay%20<span class="ord">th</span>eir%20club%20analysts">don’t pay their club analysts</a>. That should give you a brief, if not all together insulting, view of how much they respect the value of the service provided. I’m not saying they don’t see it as useful in “some capacity”, I just think that, in terms of how much they pay the rest of the staff, they could afford to have a full time analyst, especially for what an analyst has the potential to&nbsp;provide. </p>
+<blockquote>
+<p>But it is not, of course, just the coaching and scouting staff that benefit from the big data analytics being carried out at the club, the players are also reaping the rewards of the work across the club. He says: “Every one of Chelsea’s Academy players from the age of nine has a personalised development&nbsp;programme.”</p>
+</blockquote>
+<p>There is some interesting stuff here to think about. It sounds a lot like how <a href="https://twitter.com/analyseFooty">Ravi Ramineni</a> has started helping out David Tenney, Sounders <span class="caps">FC</span> fitness coach, over the past 6-8 months. By the way, h/t goes to Ravi who linked the article from his&nbsp;twitter.</p>
+
+          </section>
+        </article>
+      </div>
+    </div>
+    <footer>
+      <div class="content-wrap">
+        <div class="nav"><a href="/page/40/">« Newer</a><a href="/page/42/">Next page »</a>
+        </div>
+        <section class="about"><p>Wintersmith is made by <a href="http://johan-nordberg.com/">Johan Nordberg</a> and licensed under the <a href="http://opensource.org/licenses/MIT">MIT-license</a>.
+This footer text can be edited in about.md</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat.</p>
+<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+dolore eu fugiat nulla pariatur.</p>
+<p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+deserunt mollit anim id est laborum.</p>
+
+        </section>
+        <section class="copy">
+          <p>&copy; 2014 Someone &mdash; powered by&nbsp;<a href="https://github.com/jnordberg/wintersmith">Wintersmith</a>
+          </p>
+        </section>
+      </div>
+    </footer>
+  </body>
+</html>

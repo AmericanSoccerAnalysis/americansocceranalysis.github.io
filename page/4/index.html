@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width">
+    <title>American Soccer Analysis
+    </title>
+    <link rel="alternate" href="http://americansocceranalysis.com/feed.xml" type="application/rss+xml" title="Numbers">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic|Anonymous+Pro:400,700,400italic,700italic|Merriweather:400,700,300">
+    <link rel="stylesheet" href="/css/main.css">
+  </head>
+  <body>
+    <header class="header">
+      <div class="content-wrap">
+        <div class="logo">
+          <h1><a href="http://americansocceranalysis.com">American Soccer Analysis</a></h1>
+          <p class="description">Numbers</p>
+        </div>
+      </div>
+    </header>
+    <div id="content">
+      <div class="content-wrap">
+        <article class="article intro">
+          <header>
+            <p class="date"><span>21. February 2014</span></p>
+            <h2><a href="/articles/asa-podcast-xxxvii-the-one-where-we-talk-expg/">ASA Podcast: XXXVII The One Where We Talk ExpG</a></h2>
+          </header>
+          <section class="content"><p>Don’t get too excited about the title. We really don’t go into this nearly as much as we probably should have. We draw a lot of our thoughts from the <a href="http://11tegen11.net/2014/02/10/what-is-expg/">11tegen11 article</a> that sets the table nicely for the discussion, and we just kind of build around that. The audio for the first portion is a little maddening. We had a few problems, but everything was cleared up after about the first 20 minutes, so don’t be deterred from finishing this one. There are some good points made by Drew and me, if I may say so, which make it well worth a listen. [audio <a href="http://americansocceranalysis.files.wordpress.com/2014/02/asa-podcast-xxxvii-the-one-where-we-talk-expg.mp3">http://americansocceranalysis.files.wordpress.com/2014/02/asa-podcast-xxxvii-the-one-where-we-talk-expg.mp3</a>]</p>
+
+          </section>
+        </article>
+        <article class="article intro">
+          <header>
+            <p class="date"><span>14. February 2014</span></p>
+            <h2><a href="/articles/asa-podcast-xxxvi-the-ghost-of-the-opta-pro-forum/">ASA Podcast XXXVI: The Ghost of the Opta Pro Forum</a></h2>
+          </header>
+          <section class="content"><p>A couple weeks ago the Opta Pro Forum took place and this week we take a look at some of the different studies that came as a result and some key thoughts that we pulled out of them. Covering such a wide range of topics we invited site friend Chris Gluck to talk with us about some of these various subjects. It was a lot of fun and I think we covered some interesting topics. During the podcast we also mention the movement of Hendry Thomas, who goes from Colorado to Dallas and the current status of Matias Laba with Toronto <span class="caps">FC</span> and his impending move away from the club. Enjoy! [audio <a href="http://americansocceranalysis.files.wordpress.com/2014/02/asa-podcast-xxxvi-the-ghost-of-opta-pro-forum.mp3">http://americansocceranalysis.files.wordpress.com/2014/02/asa-podcast-xxxvi-the-ghost-of-opta-pro-forum.mp3</a>]</p>
+
+          </section>
+        </article>
+        <article class="article intro">
+          <header>
+            <p class="date"><span>06. February 2014</span></p>
+            <h2><a href="/articles/calculating-expected-goal-differential-1-0/">Calculating Expected Goal Differential 1.0</a></h2>
+          </header>
+          <section class="content"><p>The basic premise of expected goal differential is to assess how dangerous a team’s shots are, and how dangerous its opponent’s shots are. A team that gets a lot of dangerous shots inside the box, but doesn’t give up such shots on defense, is likely to be doing something tactically or skillfully, and is likely to be able to reproduce those&nbsp;results.</p>
+<p>The challenge to creating expected goal differential (xGD), then, is to obtain data that measures the difficulty of each shot all season long. Our <strong><a href="http://americansocceranalysis.wordpress.com/shot-locations/">xGD 1.0</a></strong> utilized six zones on the field to parse out the dangerous shots from those less so. Soon, we will create xGD 2.0 in which shots are not only sorted by location, but also by body part (head vs. foot) and by run of play (typical vs. free kick or penalty). Obviously kicked shots are more dangerous than headed shots, and penalty kicks are more dangerous than other shots from zone two, the location just behind the six-yard&nbsp;box.</p>
+<p>So now, for the&nbsp;calculations.</p>
+<p>Across the entire league, for all 8,291 shots taken in 2013, we calculate the proportion of shots from each zone that were finished&nbsp;(scored):</p>
+<p><strong>Location</strong>
+<strong>Goals</strong>
+<strong>Shots</strong>
+<strong>Finish%</strong></p>
+<p>One
+129
+415&nbsp;31.1%</p>
+<p>Two
+451
+2547&nbsp;17.7%</p>
+<p>Three
+100
+1401&nbsp;7.1%</p>
+<p>Four
+85
+1596&nbsp;5.3%</p>
+<p>Five
+51
+2190&nbsp;2.3%</p>
+<p>Six
+5
+142&nbsp;3.5%</p>
+<p>We see that shots from zones one and two are the most dangerous, while shots from farther out or from wider angles are less dangerous. To calculate a team’s offensive “dangerousness,” we count the number of shots each team attempted from each zone, and then multiply each total by the league’s finishing rate. As an example, here we have Sporting Kansas City’s offensive&nbsp;totals:</p>
+<p><strong>Locations</strong>
+<strong>Goals</strong>
+<strong>Attempts</strong>
+<strong>Finish%</strong>
+<strong>ExpGoals</strong></p>
+<p>One
+5
+18
+31.1%&nbsp;5.6</p>
+<p>Two
+29
+160
+17.7%&nbsp;28.3</p>
+<p>Three
+5
+78
+7.1%&nbsp;5.6</p>
+<p>Four
+3
+97
+5.3%&nbsp;5.2</p>
+<p>Five
+2
+120
+2.3%&nbsp;2.8</p>
+<p>Six
+1
+17
+3.5%&nbsp;0.6</p>
+<p><strong>Total</strong>
+<strong>45</strong>
+<strong>490</strong>
+<strong>9.2%</strong>
+<strong>48.1</strong></p>
+<p>Offensively, if <span class="caps">SKC</span> had finished at the league average rate from each respective zone, then it would have scored about 48 goals. Now let’s focus on SKC’s defensive shot&nbsp;totals:</p>
+<p><strong>Locations</strong>
+<strong>Goals</strong>
+<strong>Attempts</strong>
+<strong>Finish%</strong>
+<strong>ExpGoals</strong></p>
+<p>One
+4
+13
+31.1%&nbsp;4.0</p>
+<p>Two
+17
+95
+17.7%&nbsp;16.8</p>
+<p>Three
+4
+54
+7.1%&nbsp;3.9</p>
+<p>Four
+4
+56
+5.3%&nbsp;3.0</p>
+<p>Five
+1
+84
+2.3%&nbsp;2.0</p>
+<p>Six
+0
+4
+3.5%&nbsp;0.1</p>
+<p><strong>Total</strong>
+<strong>30</strong>
+<strong>306</strong>
+<strong>9.8%</strong>
+<strong>29.8</strong></p>
+<p>Defensively, had <span class="caps">SKC</span> allowed the league average finishing rate from each zone, it would have allowed about 30 goals (incidentally, that’s exactly what it did allow, ignoring own&nbsp;goals).</p>
+<p>Subtracting expected goals against from expected goals for, we get a team’s expected goal differential. Expected goal differential works so well as a predictor because teams are more capable of repeating their ability to get good (or bad) shots for themselves, and allow good (or bad) shots to their opponents. An extreme game in which a team finishes a high percentage of shots won’t sway that team’s xGD, nor that of its opponents, making xGD a better indicator of “true talent” at the team&nbsp;level.</p>
+<p>As for xGD 2.0, coming soon to a laptop near you, the main difference is that there will be additional shot types to consider. Instead of just six zones, now there will be six zones broken down by headed and kicked shots (12 total zones) in addition to free kick—-and possibly even penalty kick—-opportunities (adding, at most, four more shot types). As with xGD 1.0, a team’s attempts for each type of shot will be multiplied by the league’s average finishing rates, and then those totals will be summed to find expected goals for and expected goals&nbsp;against.</p>
+
+            <p class="more"><a href="/articles/calculating-expected-goal-differential-1-0/">more</a></p>
+          </section>
+        </article>
+        <article class="article intro">
+          <header>
+            <p class="date"><span>06. February 2014</span></p>
+            <h2><a href="/articles/asa-podcast-xxxv-the-return-of-the-cast/">ASA Podcast XXXV: The Return of The Cast</a></h2>
+          </header>
+          <section class="content"><p>We’re back with the podcast! We return to review the snooze-fest that was the <span class="caps">US</span> Mens game last weekend. Stepping our big toe into a bit of the pre-season waters and turn the talk to some of the major moves around MLS and some of the clubs we’ve seen improve the most over the last few months. Lastly we give you a bit of insight to what’s going on with the site and perhaps something to watch for in the coming months. Enjoy! [audio <a href="http://americansocceranalysis.files.wordpress.com/2014/02/asa-podcast-xxxv.mp3">http://americansocceranalysis.files.wordpress.com/2014/02/asa-podcast-xxxv.mp3</a>]</p>
+
+          </section>
+        </article>
+        <article class="article intro">
+          <header>
+            <p class="date"><span>05. February 2014</span></p>
+            <h2><a href="/articles/season-preview-chivas-usa/">Season Preview - Chivas USA</a></h2>
+          </header>
+          <section class="content"><p><a href="//infogr.am/chivas-usa-412444"><span class="caps">CHIVAS</span> USA</a> | <a href="//infogr.am">Create&nbsp;Infographics</a></p>
+
+          </section>
+        </article>
+        <article class="article intro">
+          <header>
+            <p class="date"><span>03. February 2014</span></p>
+            <h2><a href="/articles/crowdsourcing-the-western-and-eastern-conferences/">Crowdsourcing the Western and Eastern Conferences</a></h2>
+          </header>
+          <section class="content"><p>This past off-season we’ve put a lot of time into the project of obtaining shot data from the 2013 season. We’ve mentioned this before, and I’m sure you keep coming back waiting and expecting it to be here. We hope to release that soon. We are closing in on completing the data set, and once done, the data will be used to create goalkeeping ratings, game states analysis, and many other things that I haven’t yet really mentioned. We (read: Matthias) are all extremely anxious to get started. But while we are winding down that project and getting ready for the regular season of <span class="caps">MLS</span>—-and don’t forget NASL—-we have a pre-season exercise that we would like to conduct this month. This will be a brief and simple survey that tells us how you think each respective conference will finish after the regular season. This endeavor almost certainly won’t lead to a perfect prediction of the final standings, but hey, maybe it will be close? <strong>Take the survey here: <a href="https://www.surveymonkey.com/s/6KS3CL6">https://www.surveymonkey.com/s/<span class="caps">6KS3CL6</span></a></strong> The intended use is to give a short snapshot of how we all view teams at this stage of the season. Recent outcomes seem to distort perceived notions and ideas that we originally had about something to the point that we’re not sure what we thought prior to the occurrence of that specific event. It would seem our doubt is closely followed and probably facilitated by people claiming that it “wasn’t a surprise that Montreal jumped out to an early lead in the East” or that “you shouldn’t have been shocked to see <span class="caps">D.C.</span> United in the cellar.” After something occurs, it’s easy to feel like things were once forgone conclusions, even if beforehand it would have been hard to rationalize a one-dollar bet on that outcome. Most of the time it’s just an arrogant (and probably ignorant, too) pundit that would choose to speak for the entirety of those that enjoy and follow U.S.-based soccer. But, let me ask you, would you have guessed that the Timbers were going to be the #1 team in the West last year? A team that, despite it’s dedicated following, looked miserable just one season ago. Who would have guessed that LA was nearly a wild card team? Think about the fact that <strong>Landon Donovan,</strong> who rightfully had been restored to the <span class="caps">US</span> Mens National Team roster, was in his best form in years and the Galaxy barely missed the single elimination match to get into the playoffs. Here is a more current example: There is no doubt in my mind that Philadelphia Union supporters, the Sons of Ben and Co., believe that they will be a top-3 club in the East. Yet, judging from the incredibly small sample size of the survey I’ve sent out, most don’t believe they’re a playoffs team at this point, and some even believe they are the worst team in the East. I admit that these votes were cast before the announcement of key additions <strong>Maurice Edu</strong> and<strong> Vincent Nogueira</strong>, both of whom are primed to make sizable contributions to their new club. But that underlines that fact that maybe we missed something. Maybe there are things that with overlooked in this fast and furious off-season. This is your opportunity to influence things and make your voice heard. With most major European transfer windows closing this past weekend, the waters of <span class="caps">MLS</span> will settle and the rosters will start to set. It doesn’t eliminate the possibility of an impact talent still signing with the league; there are interesting players in leagues that still have windows open. Regardless, we are starting to gain an idea of the starting line-ups that in turn help us reference the order in which we could see clubs finish, and this gives us our best chance at making an intelligent and informed decision. The <a href="https://www.surveymonkey.com/s/6KS3CL6">link to the survey</a> is below and will be available from now until the 21<span class="ord">st</span> of February. We have a very optimistic level of participation that we’d like to see which means that we’re going to need some help to meet those obscured and honestly, pretty randomly chosen goals. This is the part where we selfishly push this on you as “the only way we can do this.” It’s an old—-and maybe a bit contrived—-tactic, sure. But the truth is that while we could be satisfied with the anywhere between 100 and as many as 250 unique and steadfast visitors that we have to this site, we won’t be. We need more help. I’ll assume you have friends or people that would pass-off as such—-Google calls them “acquaintances.” I’d also suspect that you have a new-fangled social media option which you prefer. All I would simply ask is that you take this survey and then share it with others. Whether you love your Twitter like a new-born baby, or shun it as you should Eddie Johnson, tweet this baby out.  The more voices that we hear, the better the picture becomes, and the less probable it is that some idiot just comes and nukes your favorite team just because he’s a supporter from an opposing club. <strong>Take the survey: <a href="https://www.surveymonkey.com/s/6KS3CL6">https://www.surveymonkey.com/s/<span class="caps">6KS3CL6</span></a></strong> *Please bare in mind you only get one vote. Just one. Use it&nbsp;wisely.</p>
+
+          </section>
+        </article>
+      </div>
+    </div>
+    <footer>
+      <div class="content-wrap">
+        <div class="nav"><a href="/page/3/">« Newer</a><a href="/page/5/">Next page »</a>
+        </div>
+        <section class="about"><p>Wintersmith is made by <a href="http://johan-nordberg.com/">Johan Nordberg</a> and licensed under the <a href="http://opensource.org/licenses/MIT">MIT-license</a>.
+This footer text can be edited in about.md</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat.</p>
+<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+dolore eu fugiat nulla pariatur.</p>
+<p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+deserunt mollit anim id est laborum.</p>
+
+        </section>
+        <section class="copy">
+          <p>&copy; 2014 USMNT &mdash; powered by&nbsp;<a href="https://github.com/jnordberg/wintersmith">Wintersmith</a>
+          </p>
+        </section>
+      </div>
+    </footer>
+  </body>
+</html>

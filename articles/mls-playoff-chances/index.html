@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width">
+    <title>MLS Playoff Chances - American Soccer Analysis
+    </title>
+    <link rel="alternate" href="http://americansocceranalysis.com/feed.xml" type="application/rss+xml" title="Numbers">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic|Anonymous+Pro:400,700,400italic,700italic|Merriweather:400,700,300">
+    <link rel="stylesheet" href="/css/main.css">
+  </head>
+  <body class="article-detail">
+    <header class="header">
+      <div class="content-wrap">
+        <h1>MLS Playoff Chances</h1>
+        <p class="author">Written by <span class="author">uoduckfan33</span>
+        </p>
+      </div>
+    </header>
+    <div id="content">
+      <div class="content-wrap">
+        <article class="article">
+          <section class="content"><p>We are now including playoffs and Supporters’ Shield probabilities on <a href="http://americansocceranalysis.wordpress.com/mls-tables/">our <span class="caps">MLS</span> Tables</a>, if you were unaware. These chances are calculated based on each team’s current points and remaining schedule. The remaining game-by-game probabilities are specifically generated from the&nbsp;following: </p>
+<ul>
+<li>Which team is playing at home. Home teams have won nearly 50% of all <span class="caps">MLS</span> matches during the last three seasons. There is definitely an advantage to having a remaining schedule packed with home&nbsp;matches. </li>
+<li>Total attempts generated and conceded. All season I have been studying the best predictive measures, and all season it’s been&nbsp;<span class="caps">SHOTS</span>.</li>
+<li>Finishing rates for and against. Though finishing rates weren’t very predictive at the season’s midpoint, it turns out they’re not completely worthless after at least 25&nbsp;games.</li>
+<li>Past strength of schedule, as measured by past opponents’ attempts&nbsp;data.</li>
+<li>Other variables, such as past possession percentage, were considered, but they did not help predict the outcome of the game better than those chosen above.
+The above indicators were tested on the last 10 week’s worth of games during the 2011, 2012 and 2013 seasons (well, up through the most recent week). Using a multinomial regression, I was able to calculate the influence of each indicator, and then the resulting probabilities of each of the three possible outcomes (home win, draw, away win). Once these probabilities were established, it was a matter of simulation. My simulation was based on the game-by-game probabilities (above), and I let the computer simulate the games as though they were weighted coin flips (like how your <span class="caps">PS3</span> simulates Fifa or Madden games) over and over again. So basically, I simulated the last 36 games of the season 10,000 times each, added up the total points for each team, and created 10,000 simulated tables. The POFF% probabilities is simply the proportion of times that each team earned a “clean” playoff berth—-that is, ties for fifth were not included. The Shield% probability represents the proportion of times each team earned at least a share of the top position in MLS. As an example, Portland made the playoffs 9,919 times out of the 10,000 simulated seasons, seeing its simulated probability of making the playoffs go up about 4.7% from last week after a win against the Galaxy. What might surprise you a little is that the Timbers have a very real chance (16.3%) at the Supporters’ Shield, according to this model. That’s up about 10% from last week. To try to understand why Portland received such a favorable jump, consider that just about every possible thing that could have helped the Timbers’ chances happened. Portland earned 3 points against a team that the model thought was pretty good (the Galaxy), Seattle and New York tied—-the best possible outcome from Portland’s perspective—-and Sporting KC lost in a pretty big upset. Though RSL still won, that doesn’t matter too much because Portland gets RSL at home, and that match will be the one that most likely determines a points winner between the two teams. Also consider that Portland has a home match against Seattle coming up. Because the model gives big boosts to home teams, the Timbers have a reasonable chance for 6-point swings against RSL and Seattle. Oh, and there’s that away match at Chivas to end the season. The model thinks Portland will take three points in that one with about 50% probability,<em> which is quite high for any away team. There is still a lot of fight left in the Eastern Conference playoff push, as four teams have less than 60% probability of making the playoffs. In the West, things are a little more straightforward, though San Jose has been sneaky of late, and it could potentially steal Colorado’s playoff spot. The model seems to like the Galaxy’s talent and schedule more than Colorado, enough to put the Rapids on the Western Conference’s hot seat. _</em>That might seem low, but consider that Chivas has 5 wins, 7 losses and 4 draws at home this season. That means they have only lost 7/16 games at home, or about 44%. Portland’s 50.3% makes more sense in that&nbsp;context._</li>
+</ul>
+</section>
+        </article>
+      </div>
+    </div>
+    <footer>
+      <div class="content-wrap">
+        <div class="nav"><a href="/">« Full blog</a></div>
+        <section class="about"><p>Wintersmith is made by <a href="http://johan-nordberg.com/">Johan Nordberg</a> and licensed under the <a href="http://opensource.org/licenses/MIT">MIT-license</a>.
+This footer text can be edited in about.md</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat.</p>
+<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+dolore eu fugiat nulla pariatur.</p>
+<p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+deserunt mollit anim id est laborum.</p>
+
+        </section>
+        <section class="copy">
+          <p>&copy; 2014 USMNT &mdash; powered by&nbsp;<a href="https://github.com/jnordberg/wintersmith">Wintersmith</a>
+          </p>
+        </section>
+      </div>
+    </footer>
+  </body>
+</html>

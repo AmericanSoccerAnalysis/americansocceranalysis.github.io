@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width">
+    <title>Does last season matter? - American Soccer Analysis
+    </title>
+    <link rel="alternate" href="http://americansocceranalysis.com/feed.xml" type="application/rss+xml" title="Numbers">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic|Anonymous+Pro:400,700,400italic,700italic|Merriweather:400,700,300">
+    <link rel="stylesheet" href="/css/main.css">
+  </head>
+  <body class="article-detail">
+    <header class="header">
+      <div class="content-wrap">
+        <h1>Does last season matter?</h1>
+        <p class="author">Written by <span class="author">uoduckfan33</span>
+        </p>
+      </div>
+    </header>
+    <div id="content">
+      <div class="content-wrap">
+        <article class="article">
+          <section class="content"><p>We’ve shown time and time again how helpful a team’s shot rates are in projecting how well that team is likely to do going forward. To this point, however, data has always been contained in-season, ignoring what teams did in past seasons. Since most teams keep large percentages of their personnel, it’s worth looking into the predictive power of last season. We don’t currently have shot locations for previous seasons, but we do have general shot data going back to 2011. This means that I can look at all the 2012 and 2013 teams, and how important their 2011 and 2012 seasons were, respectively. Here goes. First, I split each of the 2012 and 2013 seasons into two halves, calculating stats from each half. Let’s start by leaving out the previous season’s data. Here is the predictive power of shot rates and finishing rates, where <strong>the response variable is second-half goal differential</strong>. </p>
+<p><strong>Stat</strong>
+<strong>Coefficient</strong>
+<strong>P-value</strong></p>
+<p>Intercept
+-28.36792&nbsp;0.04%</p>
+<p>Attempt Diff (first 17)
+0.14244&nbsp;0.00%</p>
+<p>Finishing Diff (first 17)
+77.06047&nbsp;1.18%</p>
+<p>Home Remaining
+3.37472&nbsp;0.03%</p>
+<p>To summarize, I used total shot attempt differential and finishing rate differential from the first 17 games to predict the goal differential for each team in the final 17 games. Also, I controlled for how many home games each team had remaining. The sample size here is the 56 team-seasons from 2011 through 2013. All three variables are significant in the model, though the individual slopes should be interpreted&nbsp;carefully.*</p>
+<p>The residual standard error for this model is high at 6.4 goals of differential. Soccer is random, and predicting exact goal differentials is impossible, but that doesn’t mean this regression is worthless. The R-squared value is 0.574, though as <a href="http://jameswgrayson.wordpress.com/">James Grayson</a> has pointed out to me, the square root of that figure (0.757) makes more intuitive sense. One might say that we are capable of explaining 57.4 percent of the variance in second-half goal differentials, or 75.7 percent of the standard deviation (sort of). Either way, we’re explaining <em>something</em>, and that’s&nbsp;cool.</p>
+<p>But we’re here to talk about the effects of last season, so without further mumbo jumbo, the results of a more-involved linear&nbsp;regression:</p>
+<p><strong>Stat</strong>
+<strong>Coefficient</strong>
+<strong>P-value</strong></p>
+<p>Intercept
+-31.3994&nbsp;1.59%</p>
+<p>Attempt Diff (first 17)
+0.12426&nbsp;0.03%</p>
+<p><em><strong>Attempt Diff (last season)</strong></em>
+<em><strong>0.02144</strong></em>
+<em><strong>28.03%</strong></em></p>
+<p>Finishing Diff (first 17)
+93.27359&nbsp;1.14%</p>
+<p><em><strong>Finishing Diff (last season)</strong></em>
+<em><strong>72.69412</strong></em>
+<em><strong>12.09%</strong></em></p>
+<p>Home Remaining
+3.71992&nbsp;1.53%</p>
+<p>Now we’ve added teams’ shot and finishing differentials from the previous season. Obviously, I had to cut out the 2011 data (since 2010 is not available to me currently), as well as Montreal’s 2012 season (since they made no Impact in 2011<strong>). This left me with a sample size of 37 teams. Though the residual standard error was a little higher at 6.6 goals, the regression now explained 65.2 percent of the variance in second-half goal differential. Larger sample sizes would be nice, and I’ll work on that, but for now it seems that—-even halfway through a season—-the previous season’s data </strong>may** improve the projection, especially when it comes to finishing&nbsp;rates.</p>
+<p><strong>But what about projecting outcomes for, say, a team’s fourth game of the season?</strong> Using its rates from just three games of the current season would lead to shaky projections at best. I theorize that, as a season progresses, the current season’s data get more and more important for the prediction, while the previous season’s data become relatively less&nbsp;important.</p>
+<p>My results were most assuredly <strong>in</strong>conclusive, but leaned in a rather strange direction. The previous season’s shot data was seemingly more helpful in predicting outcomes during the <strong>second half of the season</strong> than it was in the first half—-except, of course, the first few weeks of the season. Specifically, the previous season’s shot data was more helpful for predicting games from weeks 21 to 35 than  it was from weeks 6 to 20. This was true for finishing rates, as well, and led me to recheck my data. The data was errorless, and now I’m left to explain why information from a team’s previous season helps project game outcomes in the second half of the current season better than the first&nbsp;half.</p>
+<p>Anybody want to take a look? Here are the results of some logistic regression models. Note that the coefficients represent the estimated change in (natural) log odds of a home&nbsp;victory.</p>
+<p><strong> Weeks 6 - 20</strong>
+<strong>Coefficient</strong>
+<strong>P-value</strong></p>
+<p>Intercept
+0.052&nbsp;67.36%</p>
+<p>Home Shot Diff
+0.139&nbsp;0.35%</p>
+<p>H Shot Diff (previous)
+-0.073&nbsp;29.30%</p>
+<p>Away Shot Diff
+-0.079&nbsp;7.61%</p>
+<p>A Shot Diff (previous)
+-0.052&nbsp;47.09%</p>
+<p><strong>Weeks 21 - 35</strong>
+<strong>Coefficient</strong>
+<strong>P-value</strong></p>
+<p>Intercept
+0.036&nbsp;78.94%</p>
+</section>
+        </article>
+      </div>
+    </div>
+    <footer>
+      <div class="content-wrap">
+        <div class="nav"><a href="/">« Full blog</a></div>
+        <section class="about"><p>Wintersmith is made by <a href="http://johan-nordberg.com/">Johan Nordberg</a> and licensed under the <a href="http://opensource.org/licenses/MIT">MIT-license</a>.
+This footer text can be edited in about.md</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat.</p>
+<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+dolore eu fugiat nulla pariatur.</p>
+<p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+deserunt mollit anim id est laborum.</p>
+
+        </section>
+        <section class="copy">
+          <p>&copy; 2014 USMNT &mdash; powered by&nbsp;<a href="https://github.com/jnordberg/wintersmith">Wintersmith</a>
+          </p>
+        </section>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width">
+    <title>Jamison Olave's Value to New York - American Soccer Analysis
+    </title>
+    <link rel="alternate" href="http://americansocceranalysis.com/feed.xml" type="application/rss+xml" title="Numbers">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic|Anonymous+Pro:400,700,400italic,700italic|Merriweather:400,700,300">
+    <link rel="stylesheet" href="/css/main.css">
+  </head>
+  <body class="article-detail">
+    <header class="header">
+      <div class="content-wrap">
+        <h1>Jamison Olave's Value to New York</h1>
+        <p class="author">Written by <span class="author">uoduckfan33</span>
+        </p>
+      </div>
+    </header>
+    <div id="content">
+      <div class="content-wrap">
+        <article class="article">
+          <section class="content"><p>There was quite a popular tweet from a canine about New York’s improved play this season when Jamison Olave was playing. <a href="https://twitter.com/GothamistDan/status/397398611438608384">https://twitter.com/GothamistDan/status/397398611438608384</a> There are obviously confounding factors at play here, not to mention small sample sizes. There were only seven matches this season in which Olave did not start, and eight in which he played 45 minutes or less. Any data obtained from these games is going to be subject to A) small sample sizes, B) lots of variance in the response variable (goals or wins), and C) no control for quality of opponent or location of the match. To deal with the small sample size/variance problem, I’m going to use our now <a href="http://americansocceranalysis.wordpress.com/shot-locations/team-by-team-shot-locations/">semi-famous data set</a> on shot location origins. Steven Fenn kindly <a href="http://theshinguardian.com/2013/10/31/mls-playoff-ball-who-are-the-belles/">showed the world</a> their predictive value, and to me that means that expected goals for and against are the most stable stat available for such an analysis. To control for New York’s opponents—-when Olave was both in and out of the starting <span class="caps">XI</span>—-I have included each of New York’s opponent’s expected goals data in the linear regression, while also accounting for whether or not the Red Bulls were at home. Blah, blah, blah, to the results! Looking at the defensive side, New York allowed shots leading to 0.24 fewer expected goals against in games that Olave started. That seems to indicate New York’s need for Olave, but the p-value was a kind-of-high 26 percent. Overall, New York’s expected goal differential climbed 0.19 goals in those games that Olave started, though again, the p-value was quite high at 46 percent.<em> Now for your shitty conclusion, courtesy of shitty p-values: Olave’s influence on New York’s level of play this season was questionable. There is some suggestion that he helped reduce goal-scoring against, however there is a reasonable chance that that difference was due to other, not-measured-here variables. What I am more comfortable claiming is that he does <em><strong>not</strong></em> make a 0.86-goal difference on the defensive side. The point is this. New York’s shot creation and goal scoring ability, for and against, are more a function of whether or not the Red Bulls are home, and against whom they are playing. Not as much whether Olave starts. Obviously putting an inferior player into the starting <span class="caps">XI</span> isn’t going to help New York out. But, as I always question, do we really know how to value soccer players at all? Maybe Olave just doesn’t make that much of a difference. After all, he’s only one of eleven players. _</em>For those curious, the number of minutes Olave played was a worse predictor variable than the simple binary variable of whether or not he started. Controlling for the strength of opponent was necessary since perhaps Mr. Petke was more likely to sit Olave against a worse opponent at home, or something like&nbsp;that._</p>
+</section>
+        </article>
+      </div>
+    </div>
+    <footer>
+      <div class="content-wrap">
+        <div class="nav"><a href="/">« Full blog</a></div>
+        <section class="about"><p>Wintersmith is made by <a href="http://johan-nordberg.com/">Johan Nordberg</a> and licensed under the <a href="http://opensource.org/licenses/MIT">MIT-license</a>.
+This footer text can be edited in about.md</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat.</p>
+<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+dolore eu fugiat nulla pariatur.</p>
+<p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+deserunt mollit anim id est laborum.</p>
+
+        </section>
+        <section class="copy">
+          <p>&copy; 2014 USMNT &mdash; powered by&nbsp;<a href="https://github.com/jnordberg/wintersmith">Wintersmith</a>
+          </p>
+        </section>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width">
+    <title>American Soccer Analysis
+    </title>
+    <link rel="alternate" href="http://americansocceranalysis.com/feed.xml" type="application/rss+xml" title="Numbers">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic|Anonymous+Pro:400,700,400italic,700italic|Merriweather:400,700,300">
+    <link rel="stylesheet" href="/css/main.css">
+  </head>
+  <body>
+    <header class="header">
+      <div class="content-wrap">
+        <div class="logo">
+          <h1><a href="http://americansocceranalysis.com">American Soccer Analysis</a></h1>
+          <p class="description">Numbers</p>
+        </div>
+      </div>
+    </header>
+    <div id="content">
+      <div class="content-wrap">
+        <article class="article intro">
+          <header>
+            <p class="date"><span>13. November 2013</span></p>
+            <h2><a href="/articles/asa-podcast-xxix-of-flip-phones-semifinals-usmnt-pass-completions-and-burrito-folding/">ASA Podcast XXIX: Of flip phones, semifinals, USMNT, pass completions, and burrito folding</a></h2>
+          </header>
+          <section class="content"><p>This week we talked about how <a href="http://www.nbc.com/saturday-night-live/video/the-festrunk-brothers/n8662/">cool and hip</a> we are, followed by a discussion of the first legs of the <span class="caps">MLS</span> Cup semifinals. We continued with potential changes to MLS’ CONCACAF Champions League births, Klinsmann’s 23 man roster for the upcoming friendlies versus Scotland and Austria, and the top 50 players in MLS by pass completion percentage. We concluded with a discussion of burritos and proper burrito folding practices. [audio <a href="http://americansocceranalysis.files.wordpress.com/2013/11/episode-xxix.mp3">http://americansocceranalysis.files.wordpress.com/2013/11/episode-xxix.mp3</a>]</p>
+
+          </section>
+        </article>
+        <article class="article intro">
+          <header>
+            <p class="date"><span>13. November 2013</span></p>
+            <h2><a href="/articles/does-last-season-matter/">Does last season matter?</a></h2>
+          </header>
+          <section class="content"><p>We’ve shown time and time again how helpful a team’s shot rates are in projecting how well that team is likely to do going forward. To this point, however, data has always been contained in-season, ignoring what teams did in past seasons. Since most teams keep large percentages of their personnel, it’s worth looking into the predictive power of last season. We don’t currently have shot locations for previous seasons, but we do have general shot data going back to 2011. This means that I can look at all the 2012 and 2013 teams, and how important their 2011 and 2012 seasons were, respectively. Here goes. First, I split each of the 2012 and 2013 seasons into two halves, calculating stats from each half. Let’s start by leaving out the previous season’s data. Here is the predictive power of shot rates and finishing rates, where <strong>the response variable is second-half goal differential</strong>. </p>
+<p><strong>Stat</strong>
+<strong>Coefficient</strong>
+<strong>P-value</strong></p>
+<p>Intercept
+-28.36792&nbsp;0.04%</p>
+<p>Attempt Diff (first 17)
+0.14244&nbsp;0.00%</p>
+<p>Finishing Diff (first 17)
+77.06047&nbsp;1.18%</p>
+<p>Home Remaining
+3.37472&nbsp;0.03%</p>
+<p>To summarize, I used total shot attempt differential and finishing rate differential from the first 17 games to predict the goal differential for each team in the final 17 games. Also, I controlled for how many home games each team had remaining. The sample size here is the 56 team-seasons from 2011 through 2013. All three variables are significant in the model, though the individual slopes should be interpreted&nbsp;carefully.*</p>
+<p>The residual standard error for this model is high at 6.4 goals of differential. Soccer is random, and predicting exact goal differentials is impossible, but that doesn’t mean this regression is worthless. The R-squared value is 0.574, though as <a href="http://jameswgrayson.wordpress.com/">James Grayson</a> has pointed out to me, the square root of that figure (0.757) makes more intuitive sense. One might say that we are capable of explaining 57.4 percent of the variance in second-half goal differentials, or 75.7 percent of the standard deviation (sort of). Either way, we’re explaining <em>something</em>, and that’s&nbsp;cool.</p>
+<p>But we’re here to talk about the effects of last season, so without further mumbo jumbo, the results of a more-involved linear&nbsp;regression:</p>
+<p><strong>Stat</strong>
+<strong>Coefficient</strong>
+<strong>P-value</strong></p>
+<p>Intercept
+-31.3994&nbsp;1.59%</p>
+<p>Attempt Diff (first 17)
+0.12426&nbsp;0.03%</p>
+<p><em><strong>Attempt Diff (last season)</strong></em>
+<em><strong>0.02144</strong></em>
+<em><strong>28.03%</strong></em></p>
+<p>Finishing Diff (first 17)
+93.27359&nbsp;1.14%</p>
+<p><em><strong>Finishing Diff (last season)</strong></em>
+<em><strong>72.69412</strong></em>
+<em><strong>12.09%</strong></em></p>
+<p>Home Remaining
+3.71992&nbsp;1.53%</p>
+<p>Now we’ve added teams’ shot and finishing differentials from the previous season. Obviously, I had to cut out the 2011 data (since 2010 is not available to me currently), as well as Montreal’s 2012 season (since they made no Impact in 2011<strong>). This left me with a sample size of 37 teams. Though the residual standard error was a little higher at 6.6 goals, the regression now explained 65.2 percent of the variance in second-half goal differential. Larger sample sizes would be nice, and I’ll work on that, but for now it seems that—-even halfway through a season—-the previous season’s data </strong>may** improve the projection, especially when it comes to finishing&nbsp;rates.</p>
+<p><strong>But what about projecting outcomes for, say, a team’s fourth game of the season?</strong> Using its rates from just three games of the current season would lead to shaky projections at best. I theorize that, as a season progresses, the current season’s data get more and more important for the prediction, while the previous season’s data become relatively less&nbsp;important.</p>
+<p>My results were most assuredly <strong>in</strong>conclusive, but leaned in a rather strange direction. The previous season’s shot data was seemingly more helpful in predicting outcomes during the <strong>second half of the season</strong> than it was in the first half—-except, of course, the first few weeks of the season. Specifically, the previous season’s shot data was more helpful for predicting games from weeks 21 to 35 than  it was from weeks 6 to 20. This was true for finishing rates, as well, and led me to recheck my data. The data was errorless, and now I’m left to explain why information from a team’s previous season helps project game outcomes in the second half of the current season better than the first&nbsp;half.</p>
+<p>Anybody want to take a look? Here are the results of some logistic regression models. Note that the coefficients represent the estimated change in (natural) log odds of a home&nbsp;victory.</p>
+<p><strong> Weeks 6 - 20</strong>
+<strong>Coefficient</strong>
+<strong>P-value</strong></p>
+<p>Intercept
+0.052&nbsp;67.36%</p>
+<p>Home Shot Diff
+0.139&nbsp;0.35%</p>
+<p>H Shot Diff (previous)
+-0.073&nbsp;29.30%</p>
+<p>Away Shot Diff
+-0.079&nbsp;7.61%</p>
+<p>A Shot Diff (previous)
+-0.052&nbsp;47.09%</p>
+<p><strong>Weeks 21 - 35</strong>
+<strong>Coefficient</strong>
+<strong>P-value</strong></p>
+<p>Intercept
+0.036&nbsp;78.94%</p>
+
+          </section>
+        </article>
+        <article class="article intro">
+          <header>
+            <p class="date"><span>12. November 2013</span></p>
+            <h2><a href="/articles/game-of-the-week-real-salt-lake-vs-portland-timbers/">Untitled</a></h2>
+          </header>
+          <section class="content"><p>A look at the 4-2 scoreline may give the appearance that Real Salt Lake shredded Portland’s defense in an wide-open free-for-all. On the contrary, two of <span class="caps">RSL</span>’s goals came directly from corner kicks, while a third was courtesy of the generosity and stone touch of Futty Danso (who was also marking Schuler on RSL’s first goal). Credit should of course go to Salt Lake for piling on the pressure, but what really characterized Real Salt Lake’s play on Sunday was not a free-flowing attack, but rather excellent team defense and a commitment to attacking via the flanks. <strong>No Space for Portland</strong> Throughout the match, Real Salt Lake’s defensive shape remained resolute, and never came close to being broken down by Portland’s 4-3-3. Kyle Beckerman was, as ever, the linchpin of <span class="caps">RSL</span>’s midfield, leading the team in aerial duels won with 6 (of 7) and tackles (4, tied with Tony Beltran), and contributing 6 clearances. However, the incessant pressure of Sebastian Velazquez and Luis Gil—who it should be noted are 19 and 22 years old, respectively—along with the fullback pairing of Beltran (who led RSL in touches with 76) and Chris Wingert/Lovel Palmer, never allowed any space for Diego Valeri or Darlington Nagbe to work their magic in the midfield. Many of Portland’s forays into the penalty area stemmed from Rodney Wallace collecting the ball in wide positions and sending in listless crosses (0-for-6) that were easily dealt with by Nat Borchers. Forward Ryan Johnson was kept in check all game, limited to a mere 18 touches in his 59 minutes on the field. The entirety of Portland’s productive offensive output consisted of Will Johnson’s free kick goal, Piquionne’s soaring headed goal, and a 77<span class="ord">th</span> minute shot from Alhassan after a slick dribbling spell through the heart of RSL’s midfield. For the entire game, Portland had only two successful dribbles and three successful crosses in the attacking third (one of which was Jewsbury’s beautiful assist). <strong>Defending from the Front</strong> The only change in the starting lineup for Real Salt Lake to start the game was Devon Sandoval replacing an ailing Alvaro Saborio. While few would argue that Sandoval is the better player, his kinetic style, defensive workrate, and ability to get into wide spaces provided problems for the Great Wall of Gambia. <em>Chalkboards of Devon Sandoval vs. Portland (left) and Alvaro Saborio vs. Los Angeles (right)</em> <img src="http://americansocceranalysis.files.wordpress.com/2013/11/rslvpor-11-11-sandoval.jpg?w=204" alt="RSLvPor-11-11-Sandoval"> <img src="http://americansocceranalysis.files.wordpress.com/2013/11/rslvla-11-07-saborio.jpg?w=203" alt="RSLvLA-11-07-Saborio"> As you can see, the defense starts from the front. Sandoval pressured wide all game long, trying to disrupt Portland’s rhythm in the defensive half of the field. Of Sandoval’s 43 actions against Portland, only 11 (25.6%) took place in the center third of the field, compared to 15 of 28 (53.6%) for Saborio against Los Angeles. Sandoval also pressured back more than Saborio did: 8 of 43 (18.6%) actions by Sandoval took place in <span class="caps">RSL</span>’s half of the field, compared to a meager 2 of 28 for Saborio (7.1%). <strong>Stretching the Diamond</strong> What really stuck out about the way that Real Salt Lake played, however, was the way that their midfield “diamond” stretched from touchline-to-touchline, with Velazquez manning the left, Gil hugging the right, and Morales drifting from side-to-side, looking for an inch of space wherever he could find it. Here is a chalkboard of passes attempted by Real Salt Lake, along with the percentage of passes attempted from each section of the field: <img src="http://americansocceranalysis.files.wordpress.com/2013/11/rslvpor-11-11-rslballpossessionareas.jpg?w=203" alt="RSLvPOR-11-11-RSLBallPossessionAreas">     <img src="http://americansocceranalysis.files.wordpress.com/2013/11/rslvpor-rslpossessionninthed.jpg?w=204" alt="RSLvPOR-RSLPossessionNinthed"> And here are all of the passes attempted by Portland, along with the percentage breakdown: <img src="http://americansocceranalysis.files.wordpress.com/2013/11/rslvpor-11-11-porballpossessionareas.jpg?w=204" alt="RSLvPOR-11-11-PORBallPossessionAreas">     <img src="http://americansocceranalysis.files.wordpress.com/2013/11/rslvpor-porpossessionninthed.jpg?w=204" alt="RSLvPOR-PORPossessionNinthed"> Real Salt Lake attempted only 13.6% of their passes from the central attacking portions of the field, while 64.3% of their passes came from the wide attacking areas. Portland, by contrast, attempted 18.9% of their passes from the central areas, and 58.6% of their passes coming from the wide attacking zones. <span class="caps">RSL</span> ratio of wide-attacking passes to central-attacking passes: 4.73-to-1 POR ratio of wide-attacking passes to central-attacking passes: 3.10-to-1 Real Salt Lake took their chances against Portland’s flank defense rather than try to fight through Will Johnson and Diego Chara. The gambit worked well, as all eight of RSL’s key passes and assists came from wide positions. <strong>Three questions for leg 2 in Portland:</strong> 1. <em>Will Saborio be healthy?</em> If so, Sandoval will likely see the bench again as Findley’s speed will serve as an outlet against a high-pressing, possibly desperate Timbers squad, unless… 2. <em>Kreis opts for the 4-2-3-1?</em> Beckerman and Yordany Alvarez were deployed in a double pivot at Los Angeles a few weeks ago, and while the results were not exactly convincing, it perhaps implies (or at least I’m inferring) that Kreis may want to take a more conservative approach on the road in the playoffs. 3. _Ryan Johnson or Frederic Piquionne? _Ryan Johnson has put in a workmanlike effort thus far in the playoffs, but with his playing time diminishing each game (83 min @ <span class="caps">SEA</span>, 69 min v SEA, 59 min @ RSL) and Piquionne finally healthy (and able to leap clear over Nat Borchers), it may be time for Piquionne to crack the starting&nbsp;lineup.</p>
+
+            <p class="more"><a href="/articles/game-of-the-week-real-salt-lake-vs-portland-timbers/">more</a></p>
+          </section>
+        </article>
+        <article class="article intro">
+          <header>
+            <p class="date"><span>11. November 2013</span></p>
+            <h2><a href="/articles/what-piquionnes-goal-means-to-portland/">What Piquionnes goal means to Portland</a></h2>
+          </header>
+          <section class="content"><p>Though our game states data set doesn’t yet include all of 2013, it still includes 137 games. In those 137 games, only five home teams ever went down three goals, and all five teams lost. There were 24 games in which the home team went down two goals, with only one winner (4.2%) and five ties (20.8%). The sample of two-goal games perhaps gives a little hope to the Timbers, but these small sample sizes lend themselves to large margins of error. It is also important to note that teams that go down two goals at home tend to be bad teams—-like Chivas <span class="caps">USA</span>, which litters that particular data set. None of the five teams that ever went down three goals at home made the playoffs this year. Only seven of the 24 teams to go down two goals at home made it to the playoffs. Portland is a good team. Depending on your model of preference, the Timbers are somewhere in the top eight. So even if those probabilities up there hypothetically had small margins of error, they still wouldn’t necessarily apply to the Timbers. Oh, and while we’re talking about extra variables, in those games the teams had less time to come back. To work around these confounding variables, I consulted a couple models, and I controlled for team ability using our <a href="http://americansocceranalysis.wordpress.com/shot-locations/">expected goal differential</a>. Here’s what I found. A logistic model suggests that, for each goal of deficit early in a match, the odds of winning are reduced by a factor of  about two or three. A tie, though, would also allow Portland to play on. A home team’s chances winning <em>or</em> tying fall from about 75 percent in a typical game that begins zero-zero, to about 25 percent being down two goals. Down three goals, and that probability plummets to less than 10 percent. But using this particular logistic regression was dangerous, as I was forced to extrapolate for situations that never happen during the regular season—-starting a game from behind. So I went to a linear model. The linear model expects Portland to win by about 0.4 goals. 15.5 percent of home teams in our model were able to perform at least 1.6 goals above expectation, what the Timbers would need to at least force a draw in regulation. Only 4.6 percent of teams performed 2.6 goals above expectation. If we just compromise between what the two models are telling us, then the Timbers probably have about a 20-percent chance to pull off a draw in regulation. That probability would have been closer to five percent had Piquionne not finished a beautiful header in stoppage&nbsp;time.</p>
+
+          </section>
+        </article>
+        <article class="article intro">
+          <header>
+            <p class="date"><span>08. November 2013</span></p>
+            <h2><a href="/articles/the-predictive-power-of-shot-locations-data/">The Predictive Power of Shot Locations Data</a></h2>
+          </header>
+          <section class="content"><p>Two articles in particular inspired me this past week—-one by Steve Fenn at the <strong><a href="http://theshinguardian.com/2013/10/31/mls-playoff-ball-who-are-the-belles/">Shin Guardian</a></strong>, and the other by Mark Taylor at <strong><a href="http://thepowerofgoals.blogspot.co.uk/2013/10/finishing-and-hitting-target-in-mls.html">The Power of Goals</a></strong>. Steve showed us that, during the 2013 season, the expected goal differentials (xGD) derived from the <a href="http://americansocceranalysis.wordpress.com/shot-locations/">shot locations data</a> were better than any other statistics available at predicting outcomes in the second half of the season. It can be argued that statistics that are predictive are also stable, indicating underlying skill rather than luck or randomness. Mark came along and showed that the individual zones themselves behave differently. For example, Mark’s analysis suggested that conversion rates (goal scoring rates) are more skill-driven in zones one, two, and three, but more luck-driven or random in zones four, five, and six. Piecing these fine analyses together, there is reason to believe that a <em>partially</em> regressed version of xGD may be the most predictive. The xGD currently presented on the site regresses all teams fully back league-average finishing rates. However, one might guess that finishing rates in certain zones may be more skill, and thus predictive. Essentially, we may be losing important information by fully regressing finishing rates to league average within each zone. I assessed the predictive power of finishing rates within each zone by splitting the season into two halves, and then looking at the correlation between finishing rates in each half for each team. The chart is&nbsp;below: </p>
+<p><strong>Zone</strong>
+<strong>Correlation</strong>
+<strong>P-value</strong></p>
+<p>1
+0.11&nbsp;65.6%</p>
+<p>2
+0.26&nbsp;28.0%</p>
+<p>3
+-0.08&nbsp;74.6%</p>
+<p>4
+-0.41&nbsp;8.2%</p>
+<p>5
+-0.33&nbsp;17.3%</p>
+<p>6
+-0.14
+58.5%
+Wow. This surprised me when I saw it. There are no statistically significant correlations—-especially when the <a href="http://en.wikipedia.org/wiki/Multiple_comparisons#The_problem">issue of multiple testing</a> is considered—-and some of the suggested correlations are actually negative. Without more seasons of data (they’re coming, I promise), my best guess is that finishing rates within each zone are pretty much randomly driven in <span class="caps">MLS</span> over 17 games. Thus full regression might be the best way to go in the first half of the season. But just in case… I grouped zones one, two, and three into the “close-to-the-goal” group, and zones four, five, and six into the “far-from-the-goal” group. The&nbsp;results: </p>
+<p><strong>Zone</strong>
+<strong>Correlation</strong>
+<strong>P-value</strong></p>
+<p>Close
+0.23&nbsp;34.5%</p>
+<p>Far
+-0.47&nbsp;4.1%</p>
+<p>Okay, well this is interesting. Yes, the multiple testing problem still exists, but let’s assume for a second there actually is a moderate negative correlation for finishing rates in the “far zone.” Maybe the scouting report gets out by mid-season, and defenses close out faster on good shooters from distance? Or something else? Or this is all a type-I error—-I’m still skeptical of that negative&nbsp;correlation.</p>
+<p>Without doing that whole song and dance for finishing rates <em><strong>against</strong></em>, I will say that the results were similar. So full regression on finishing rates for now, more research with more data&nbsp;later!</p>
+<p>But now, piggybacking onto what Mark found, there does seem to be skill-based differences in how many total goals are scored by zone. In other words, some teams are designed to thrive off of a few chances from higher-scoring zones, while others perhaps are more willing to go for quantity over quality. The last thing I want to check is whether or not the expected goal differentials separated by zone contain more predictive information than when lumped&nbsp;together.</p>
+<p>Like some of Mark’s work implied, I found that our <strong><em>expected</em></strong> goal differentials inside the box are very predictive of a team’s actual second-half goal differentials inside the box—-the correlation coefficient was 0.672, better than simple goal differential which registered a correlation of 0.546. This means that perhaps the expected goal differentials from zones one, two, and three should get more weight in a prediction formula. Additionally, having a better goal differential outside the box, specifically in zones five and six, is probably not a good thing. That would just mean that a team is taking too many shots from poor scoring zones. In the end, I went with a model that used <em><strong>attempt difference</strong></em> from each zone, and here’s the best model I&nbsp;found.*</p>
+<p><strong>Zone</strong>
+<strong>Coefficient</strong>
+<strong>P-value</strong></p>
+<p>(Intercept)
+-0.61&nbsp;0.98</p>
+<p>Zones 1, 3, 4
+1.66&nbsp;0.29</p>
+<p>Zone 2
+6.35&nbsp;0.01</p>
+<p>Zones 5, 6
+-1.11&nbsp;0.41</p>
+<p><em>*Extremely similar results to using expected goal differential, since xGD within each zone is a linear function of&nbsp;attempts.</em></p>
+<p>The R-squared for this model was 0.708, beating out the model that just used overall expected goal differential (0.650). The zone that stabilized fastest was zone two, which makes sense since about a third of all attempts come from zone two. Bigger sample sizes help with stabilization. For those curious, the inputs here were attempt differences <em><strong>per game</strong></em> over the first seventeen games, and the response output is predicted total goal differential in the second half of the&nbsp;season.</p>
+
+            <p class="more"><a href="/articles/the-predictive-power-of-shot-locations-data/">more</a></p>
+          </section>
+        </article>
+        <article class="article intro">
+          <header>
+            <p class="date"><span>06. November 2013</span></p>
+            <h2><a href="/articles/asa-podcast-xxviii-mls-conference-semifinals/">ASA Podcast XXVIII: The One where we talk MLS Conference Semi-finals</a></h2>
+          </header>
+          <section class="content"><p>Last night we talked about the eight teams still in the playoffs in a round-robin-style discussion, and then followed up the playoff talk with a general discussion about numbers. Specifically we talked about often-quoted and used statistics that don’t really hold any value. I also pretty much alienate all lawyers who listen to the podcast. Enjoy! [audio <a href="http://americansocceranalysis.files.wordpress.com/2013/11/asa-episode-xxviii.mp3">http://americansocceranalysis.files.wordpress.com/2013/11/asa-episode-xxviii.mp3</a>]</p>
+
+          </section>
+        </article>
+      </div>
+    </div>
+    <footer>
+      <div class="content-wrap">
+        <div class="nav"><a href="/page/7/">« Newer</a><a href="/page/9/">Next page »</a>
+        </div>
+        <section class="about"><p>Wintersmith is made by <a href="http://johan-nordberg.com/">Johan Nordberg</a> and licensed under the <a href="http://opensource.org/licenses/MIT">MIT-license</a>.
+This footer text can be edited in about.md</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat.</p>
+<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+dolore eu fugiat nulla pariatur.</p>
+<p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+deserunt mollit anim id est laborum.</p>
+
+        </section>
+        <section class="copy">
+          <p>&copy; 2014 USMNT &mdash; powered by&nbsp;<a href="https://github.com/jnordberg/wintersmith">Wintersmith</a>
+          </p>
+        </section>
+      </div>
+    </footer>
+  </body>
+</html>

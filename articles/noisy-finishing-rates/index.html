@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width">
+    <title>Noisy Finishing Rates - American Soccer Analysis
+    </title>
+    <link rel="alternate" href="http://americansocceranalysis.com/feed.xml" type="application/rss+xml" title="Numbers">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic|Anonymous+Pro:400,700,400italic,700italic|Merriweather:400,700,300">
+    <link rel="stylesheet" href="/css/main.css">
+  </head>
+  <body class="article-detail">
+    <header class="header">
+      <div class="content-wrap">
+        <h1>Noisy Finishing Rates</h1>
+        <p class="author">Written by <span class="author">uoduckfan33</span>
+        </p>
+      </div>
+    </header>
+    <div id="content">
+      <div class="content-wrap">
+        <article class="article">
+          <section class="content"><p>As a supplement to the <a href="http://americansocceranalysis.wordpress.com/2013/08/12/signal-and-noise-in-mls/">stabilization analysis</a> I did last week, I wanted to add the self-predictive powers of <em>finishing rates</em>—basically soccer’s shooting percentage. Team finishing rates can be found both on our <a href="http://americansocceranalysis.wordpress.com/mls-tables/"><span class="caps">MLS</span> Tables</a> and in our <a href="http://americansocceranalysis.wordpress.com/shot-locations/">Shot Locations</a> analysis, so it would be nice to know if we can trust them. Last week I split the 2012 and 2013 seasons in half and assessed the simple linear relationships for various statistics between the two halves of each season across all 19 teams. Now I have 2011 data, and we can have even more fun. I included bivariate data from both 2011 and 2012 together, leaving out 2013 since it is not over yet. It is important to note that I am not looking <em>across</em> seasons, only <em>within</em> seasons. To the&nbsp;results! </p>
+<p><strong>Stat</strong>
+<strong>Correlation</strong>
+<strong>Pvalue</strong></p>
+<p>Points</p>
+<p>0.438</p>
+<p>0.7%</p>
+<p>Total&nbsp;Attempts</p>
+<p>0.397</p>
+<p>1.5%</p>
+<p>Blocked&nbsp;Shots</p>
+<p>0.372</p>
+<p>2.3%</p>
+<p>Shots on&nbsp;Goal</p>
+<p>0.297</p>
+<p>7.4%</p>
+<p>Goals</p>
+<p>0.261</p>
+<p>11.9%</p>
+<p>Shots off&nbsp;Goal</p>
+<p>0.144</p>
+<p>39.5%</p>
+<p>Finishing</p>
+<p>0.109</p>
+<p>52.1%</p>
+<p>Surprisingly, to me at least, a team’s points earned has been the most stable statistic in <span class="caps">MLS</span> (by my linear definition of stability). Not so surprising to me was that total attempts is also one of the most stable. Look down at the very bottom, and you’ll find finishing rates. Check out the graph&nbsp;below: </p>
+<p> <img src="http://americansocceranalysis.files.wordpress.com/2013/08/finishing-rates-stabilization-2011-2012.jpeg" alt="Finishing Rates Stabilization 2011-2012"></p>
+<p>Some teams finish really well early in the season, then flop. Others finish poorly, then turn it on. But there’s no obvious to pattern that would allow us to predict second-half finishing rates. In fact, the best prediction for any given team would be to suggest that they will regress to league average, which is exactly what our <a href="http://americansocceranalysis.wordpress.com/shot-locations/#lucktable">Luck Table</a> does. It regresses all teams’ finishing rates in each zone back to league averages, then calculates an expected goal differential. On a side note, you might be asking yourself why I don’t just use points to predict points. Because this: while the correlation between first-half and second-half points is about 0.438, the correlation between first-half attempts ratios and second-half points is slightly stronger at 0.480. Also, in a multiple regression model where I let both first-half attempts ratio and first-half points duke it out, first-half attempts ratio edges out points for winner of the predictor&nbsp;trophy. </p>
+<p>Estimate
+Std. Error
+T-stat&nbsp;P-value</p>
+<p>Intercept
+1.7019
+5.97
+0.285&nbsp;77.7%</p>
+<p><strong>AttRatio</strong>
+<strong>13.7067</strong>
+<strong>6.32</strong>
+<strong>2.17</strong>
+<strong>3.7%</strong></p>
+<p>Points
+0.3262
+0.19
+1.691
+10.0%
+And since this is a post about finishing&nbsp;rates… </p>
+<p>Estimate
+Std. Error
+T-stat&nbsp;P-value</p>
+<p>Intercept
+-2.243
+7.75
+-0.29&nbsp;77.4%</p>
+<p><strong>AttRatio</strong>
+<strong>18.570</strong>
+<strong>5.71</strong>
+<strong>3.26</strong>
+<strong>0.3%</strong></p>
+<p>Finishing%
+63.743
+50.08
+1.27
+21.2%
+A good prediction model (on which we are working) will include more than just a team’s attempts ratio, but for now, it is king of the team&nbsp;statistics.</p>
+</section>
+        </article>
+      </div>
+    </div>
+    <footer>
+      <div class="content-wrap">
+        <div class="nav"><a href="/">« Full blog</a></div>
+        <section class="about"><p>Wintersmith is made by <a href="http://johan-nordberg.com/">Johan Nordberg</a> and licensed under the <a href="http://opensource.org/licenses/MIT">MIT-license</a>.
+This footer text can be edited in about.md</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat.</p>
+<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+dolore eu fugiat nulla pariatur.</p>
+<p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+deserunt mollit anim id est laborum.</p>
+
+        </section>
+        <section class="copy">
+          <p>&copy; 2014 USMNT &mdash; powered by&nbsp;<a href="https://github.com/jnordberg/wintersmith">Wintersmith</a>
+          </p>
+        </section>
+      </div>
+    </footer>
+  </body>
+</html>

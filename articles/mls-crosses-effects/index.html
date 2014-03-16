@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width">
+    <title>The small effects of crossing in MLS - American Soccer Analysis
+    </title>
+    <link rel="alternate" href="http://americansocceranalysis.com/feed.xml" type="application/rss+xml" title="Numbers">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic|Anonymous+Pro:400,700,400italic,700italic|Merriweather:400,700,300">
+    <link rel="stylesheet" href="/css/main.css">
+  </head>
+  <body class="article-detail">
+    <header class="header">
+      <div class="content-wrap">
+        <h1>The small effects of crossing in MLS</h1>
+        <p class="author">Written by <span class="author">uoduckfan33</span>
+        </p>
+      </div>
+    </header>
+    <div id="content">
+      <div class="content-wrap">
+        <article class="article">
+          <section class="content"><p>During the podcast that Harrison and I recorded yesterday (to be posted soon), we discussed the value that a midfielder can bring to a team even if he’s not scoring. Harrison brought up, for instance, Mauro Rosales’ crossing ability as a dangerous weapon for the Sounders. The only thing I had to offer to the conversation was data-driven, as I have not seen the Sounders play this season (yes, I unfortunately missed the Timbers-Sounders match). I noticed in the 2013 data that teams that “cross too much” as part of their offenses have tended to fare slightly worse this season. Let me explain the methodology… The game-by-game statistics for “open-play crosses” can be found in all boxscores on mlssoccer.com. An open-play cross is just one that occurs during the run of play, as opposed to free kicks and corner kicks. Crosses can be dangerous, as we’ve seen during the last decade from the German national team specifically, but not every team is the German national team. To isolate the effectiveness of crosses, I started by dividing a team’s crosses by its scoring attempts—scoring attempts being just any shot or attempt in the general direction of the goal. The ratio of crosses to scoring attempts serves as a decent proxy for the fraction of a team’s offense that comes from crosses rather than direct play through the middle. Is it perfect? Of course not, but I hope that this generates some discussion about how to better evaluate the role of crossing in <span class="caps">MLS</span>. On to the results! For every game played up through April 6<span class="ord">th</span>, I took the home and away teams’ ratios of crosses to goal-scoring attempts. As an example, in the Timbers-Sounders matchup on March 16<span class="ord">th</span>, Portland recorded 20 open-play crosses and 13 scoring attempts. Seattle played 9 crosses in, and had just 7 scoring attempts. In both cases, we see that the fraction is actually greater than one. So while this not really a percentage at all, dividing by attempts still helps to control for a teams’ overall offensive production. Portland = 20/13 = 1.54 Seattle = 9/7 = 1.29 Then I take the home team’s ratio and divide by the away team’s ratio. 1.29/1.54 = 0.84 The fact that this number is less than one simply suggests that the home team, the Sounders, used crosses as a smaller proportion of their open-play tactics. Next, I ran a simple linear regression between this final ratio and the goal differential in all matches. Here is the formula: Goal Differential = –0.31 x Ratio + 0.82<em> So what does this mean? Well basically, it says that the more often an <span class="caps">MLS</span> home team utilizes crosses, the lower their goal differential tends to be. There are tons of other variables at play in soccer, but let me take a stab at explaining this correlation. Crosses are valid goal-scoring opportunities, and any team would almost always rather get a cross in than, for instance, play the ball all the way back to the defense. But in that same vein, a team would rather attack through the middle and earn a more direct goal scoring opportunity than just whip crosses in all day. So I think what this regression tells us is something that just about every soccer player knows. If a team is forced to constantly play from the wings—if it is forced outside more often than not—its goal-scoring potential will be reduced. Crosses are a necessary part of most offenses simply because a team cannot always get a perfect opportunity in front of the net. Teams that cross a lot may be doing so as part of team tactics, or in any given game it could be an efficient defense that forces the offense to play from the wings. Either way, a weak-but-existent correlation exists that suggests teams should not settle for crosses if possible. I’m sure we haven’t learned anything new here, but I’m a firm believer in attempting to quantify phenomena in sports in an effort to better understand the effect, and to actually measure the size of the effect. _</em>P-value was 8%, and R-square was 0.05. So this was definitely a weak relationship, and there is more than enough room for certain teams with the right personnel to thrive on crosses.&nbsp;_</p>
+</section>
+        </article>
+      </div>
+    </div>
+    <footer>
+      <div class="content-wrap">
+        <div class="nav"><a href="/">« Full blog</a></div>
+        <section class="about"><p>Wintersmith is made by <a href="http://johan-nordberg.com/">Johan Nordberg</a> and licensed under the <a href="http://opensource.org/licenses/MIT">MIT-license</a>.
+This footer text can be edited in about.md</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat.</p>
+<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+dolore eu fugiat nulla pariatur.</p>
+<p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+deserunt mollit anim id est laborum.</p>
+
+        </section>
+        <section class="copy">
+          <p>&copy; 2014 USMNT &mdash; powered by&nbsp;<a href="https://github.com/jnordberg/wintersmith">Wintersmith</a>
+          </p>
+        </section>
+      </div>
+    </footer>
+  </body>
+</html>

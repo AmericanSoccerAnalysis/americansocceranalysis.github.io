@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width">
+    <title>Calculating Expected Goal Differential 1.0 - American Soccer Analysis
+    </title>
+    <link rel="alternate" href="http://americansocceranalysis.com/feed.xml" type="application/rss+xml" title="Numbers">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic|Anonymous+Pro:400,700,400italic,700italic|Merriweather:400,700,300">
+    <link rel="stylesheet" href="/css/main.css">
+  </head>
+  <body class="article-detail">
+    <header class="header">
+      <div class="content-wrap">
+        <h1>Calculating Expected Goal Differential 1.0</h1>
+        <p class="author">Written by <span class="author">uoduckfan33</span>
+        </p>
+      </div>
+    </header>
+    <div id="content">
+      <div class="content-wrap">
+        <article class="article">
+          <section class="content"><p>The basic premise of expected goal differential is to assess how dangerous a team’s shots are, and how dangerous its opponent’s shots are. A team that gets a lot of dangerous shots inside the box, but doesn’t give up such shots on defense, is likely to be doing something tactically or skillfully, and is likely to be able to reproduce those&nbsp;results.</p>
+<p>The challenge to creating expected goal differential (xGD), then, is to obtain data that measures the difficulty of each shot all season long. Our <strong><a href="http://americansocceranalysis.wordpress.com/shot-locations/">xGD 1.0</a></strong> utilized six zones on the field to parse out the dangerous shots from those less so. Soon, we will create xGD 2.0 in which shots are not only sorted by location, but also by body part (head vs. foot) and by run of play (typical vs. free kick or penalty). Obviously kicked shots are more dangerous than headed shots, and penalty kicks are more dangerous than other shots from zone two, the location just behind the six-yard&nbsp;box.</p>
+<p>So now, for the&nbsp;calculations.</p>
+<p>Across the entire league, for all 8,291 shots taken in 2013, we calculate the proportion of shots from each zone that were finished&nbsp;(scored):</p>
+<p><strong>Location</strong>
+<strong>Goals</strong>
+<strong>Shots</strong>
+<strong>Finish%</strong></p>
+<p>One
+129
+415&nbsp;31.1%</p>
+<p>Two
+451
+2547&nbsp;17.7%</p>
+<p>Three
+100
+1401&nbsp;7.1%</p>
+<p>Four
+85
+1596&nbsp;5.3%</p>
+<p>Five
+51
+2190&nbsp;2.3%</p>
+<p>Six
+5
+142&nbsp;3.5%</p>
+<p>We see that shots from zones one and two are the most dangerous, while shots from farther out or from wider angles are less dangerous. To calculate a team’s offensive “dangerousness,” we count the number of shots each team attempted from each zone, and then multiply each total by the league’s finishing rate. As an example, here we have Sporting Kansas City’s offensive&nbsp;totals:</p>
+<p><strong>Locations</strong>
+<strong>Goals</strong>
+<strong>Attempts</strong>
+<strong>Finish%</strong>
+<strong>ExpGoals</strong></p>
+<p>One
+5
+18
+31.1%&nbsp;5.6</p>
+<p>Two
+29
+160
+17.7%&nbsp;28.3</p>
+<p>Three
+5
+78
+7.1%&nbsp;5.6</p>
+<p>Four
+3
+97
+5.3%&nbsp;5.2</p>
+<p>Five
+2
+120
+2.3%&nbsp;2.8</p>
+<p>Six
+1
+17
+3.5%&nbsp;0.6</p>
+<p><strong>Total</strong>
+<strong>45</strong>
+<strong>490</strong>
+<strong>9.2%</strong>
+<strong>48.1</strong></p>
+<p>Offensively, if <span class="caps">SKC</span> had finished at the league average rate from each respective zone, then it would have scored about 48 goals. Now let’s focus on SKC’s defensive shot&nbsp;totals:</p>
+<p><strong>Locations</strong>
+<strong>Goals</strong>
+<strong>Attempts</strong>
+<strong>Finish%</strong>
+<strong>ExpGoals</strong></p>
+<p>One
+4
+13
+31.1%&nbsp;4.0</p>
+<p>Two
+17
+95
+17.7%&nbsp;16.8</p>
+<p>Three
+4
+54
+7.1%&nbsp;3.9</p>
+<p>Four
+4
+56
+5.3%&nbsp;3.0</p>
+<p>Five
+1
+84
+2.3%&nbsp;2.0</p>
+<p>Six
+0
+4
+3.5%&nbsp;0.1</p>
+<p><strong>Total</strong>
+<strong>30</strong>
+<strong>306</strong>
+<strong>9.8%</strong>
+<strong>29.8</strong></p>
+<p>Defensively, had <span class="caps">SKC</span> allowed the league average finishing rate from each zone, it would have allowed about 30 goals (incidentally, that’s exactly what it did allow, ignoring own&nbsp;goals).</p>
+<p>Subtracting expected goals against from expected goals for, we get a team’s expected goal differential. Expected goal differential works so well as a predictor because teams are more capable of repeating their ability to get good (or bad) shots for themselves, and allow good (or bad) shots to their opponents. An extreme game in which a team finishes a high percentage of shots won’t sway that team’s xGD, nor that of its opponents, making xGD a better indicator of “true talent” at the team&nbsp;level.</p>
+<p>As for xGD 2.0, coming soon to a laptop near you, the main difference is that there will be additional shot types to consider. Instead of just six zones, now there will be six zones broken down by headed and kicked shots (12 total zones) in addition to free kick—-and possibly even penalty kick—-opportunities (adding, at most, four more shot types). As with xGD 1.0, a team’s attempts for each type of shot will be multiplied by the league’s average finishing rates, and then those totals will be summed to find expected goals for and expected goals&nbsp;against.</p>
+<h2 id="comments">Comments</h2>
+<p><strong><a href="/articles/calculating-expected-goal-differential-1-0/#218" title="2014-02-12 00:28:52">Brenton</a>:</strong> This is exciting stuff, gents. Recommendation: The link to the earlier post that has a diagram of where the Zones are is not evident at all. Perhaps a darker colour, so it’s obvious that it’s a&nbsp;link?</p>
+<p><strong><a href="/articles/calculating-expected-goal-differential-1-0/#221" title="2014-02-12 10:26:58">Matthias Kullowatz</a>:</strong> I try to remember to make all the links bold! Thanks for catching&nbsp;that.</p>
+</section>
+        </article>
+      </div>
+    </div>
+    <footer>
+      <div class="content-wrap">
+        <div class="nav"><a href="/">« Full blog</a></div>
+        <section class="about"><p>Wintersmith is made by <a href="http://johan-nordberg.com/">Johan Nordberg</a> and licensed under the <a href="http://opensource.org/licenses/MIT">MIT-license</a>.
+This footer text can be edited in about.md</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat.</p>
+<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+dolore eu fugiat nulla pariatur.</p>
+<p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+deserunt mollit anim id est laborum.</p>
+
+        </section>
+        <section class="copy">
+          <p>&copy; 2014 USMNT &mdash; powered by&nbsp;<a href="https://github.com/jnordberg/wintersmith">Wintersmith</a>
+          </p>
+        </section>
+      </div>
+    </footer>
+  </body>
+</html>

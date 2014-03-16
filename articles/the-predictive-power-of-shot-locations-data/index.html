@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width">
+    <title>The Predictive Power of Shot Locations Data - American Soccer Analysis
+    </title>
+    <link rel="alternate" href="http://americansocceranalysis.com/feed.xml" type="application/rss+xml" title="Numbers">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic|Anonymous+Pro:400,700,400italic,700italic|Merriweather:400,700,300">
+    <link rel="stylesheet" href="/css/main.css">
+  </head>
+  <body class="article-detail">
+    <header class="header">
+      <div class="content-wrap">
+        <h1>The Predictive Power of Shot Locations Data</h1>
+        <p class="author">Written by <span class="author">uoduckfan33</span>
+        </p>
+      </div>
+    </header>
+    <div id="content">
+      <div class="content-wrap">
+        <article class="article">
+          <section class="content"><p>Two articles in particular inspired me this past week—-one by Steve Fenn at the <strong><a href="http://theshinguardian.com/2013/10/31/mls-playoff-ball-who-are-the-belles/">Shin Guardian</a></strong>, and the other by Mark Taylor at <strong><a href="http://thepowerofgoals.blogspot.co.uk/2013/10/finishing-and-hitting-target-in-mls.html">The Power of Goals</a></strong>. Steve showed us that, during the 2013 season, the expected goal differentials (xGD) derived from the <a href="http://americansocceranalysis.wordpress.com/shot-locations/">shot locations data</a> were better than any other statistics available at predicting outcomes in the second half of the season. It can be argued that statistics that are predictive are also stable, indicating underlying skill rather than luck or randomness. Mark came along and showed that the individual zones themselves behave differently. For example, Mark’s analysis suggested that conversion rates (goal scoring rates) are more skill-driven in zones one, two, and three, but more luck-driven or random in zones four, five, and six. Piecing these fine analyses together, there is reason to believe that a <em>partially</em> regressed version of xGD may be the most predictive. The xGD currently presented on the site regresses all teams fully back league-average finishing rates. However, one might guess that finishing rates in certain zones may be more skill, and thus predictive. Essentially, we may be losing important information by fully regressing finishing rates to league average within each zone. I assessed the predictive power of finishing rates within each zone by splitting the season into two halves, and then looking at the correlation between finishing rates in each half for each team. The chart is&nbsp;below: </p>
+<p><strong>Zone</strong>
+<strong>Correlation</strong>
+<strong>P-value</strong></p>
+<p>1
+0.11&nbsp;65.6%</p>
+<p>2
+0.26&nbsp;28.0%</p>
+<p>3
+-0.08&nbsp;74.6%</p>
+<p>4
+-0.41&nbsp;8.2%</p>
+<p>5
+-0.33&nbsp;17.3%</p>
+<p>6
+-0.14
+58.5%
+Wow. This surprised me when I saw it. There are no statistically significant correlations—-especially when the <a href="http://en.wikipedia.org/wiki/Multiple_comparisons#The_problem">issue of multiple testing</a> is considered—-and some of the suggested correlations are actually negative. Without more seasons of data (they’re coming, I promise), my best guess is that finishing rates within each zone are pretty much randomly driven in <span class="caps">MLS</span> over 17 games. Thus full regression might be the best way to go in the first half of the season. But just in case… I grouped zones one, two, and three into the “close-to-the-goal” group, and zones four, five, and six into the “far-from-the-goal” group. The&nbsp;results: </p>
+<p><strong>Zone</strong>
+<strong>Correlation</strong>
+<strong>P-value</strong></p>
+<p>Close
+0.23&nbsp;34.5%</p>
+<p>Far
+-0.47&nbsp;4.1%</p>
+<p>Okay, well this is interesting. Yes, the multiple testing problem still exists, but let’s assume for a second there actually is a moderate negative correlation for finishing rates in the “far zone.” Maybe the scouting report gets out by mid-season, and defenses close out faster on good shooters from distance? Or something else? Or this is all a type-I error—-I’m still skeptical of that negative&nbsp;correlation.</p>
+<p>Without doing that whole song and dance for finishing rates <em><strong>against</strong></em>, I will say that the results were similar. So full regression on finishing rates for now, more research with more data&nbsp;later!</p>
+<p>But now, piggybacking onto what Mark found, there does seem to be skill-based differences in how many total goals are scored by zone. In other words, some teams are designed to thrive off of a few chances from higher-scoring zones, while others perhaps are more willing to go for quantity over quality. The last thing I want to check is whether or not the expected goal differentials separated by zone contain more predictive information than when lumped&nbsp;together.</p>
+<p>Like some of Mark’s work implied, I found that our <strong><em>expected</em></strong> goal differentials inside the box are very predictive of a team’s actual second-half goal differentials inside the box—-the correlation coefficient was 0.672, better than simple goal differential which registered a correlation of 0.546. This means that perhaps the expected goal differentials from zones one, two, and three should get more weight in a prediction formula. Additionally, having a better goal differential outside the box, specifically in zones five and six, is probably not a good thing. That would just mean that a team is taking too many shots from poor scoring zones. In the end, I went with a model that used <em><strong>attempt difference</strong></em> from each zone, and here’s the best model I&nbsp;found.*</p>
+<p><strong>Zone</strong>
+<strong>Coefficient</strong>
+<strong>P-value</strong></p>
+<p>(Intercept)
+-0.61&nbsp;0.98</p>
+<p>Zones 1, 3, 4
+1.66&nbsp;0.29</p>
+<p>Zone 2
+6.35&nbsp;0.01</p>
+<p>Zones 5, 6
+-1.11&nbsp;0.41</p>
+<p><em>*Extremely similar results to using expected goal differential, since xGD within each zone is a linear function of&nbsp;attempts.</em></p>
+<p>The R-squared for this model was 0.708, beating out the model that just used overall expected goal differential (0.650). The zone that stabilized fastest was zone two, which makes sense since about a third of all attempts come from zone two. Bigger sample sizes help with stabilization. For those curious, the inputs here were attempt differences <em><strong>per game</strong></em> over the first seventeen games, and the response output is predicted total goal differential in the second half of the&nbsp;season.</p>
+<h2 id="comments">Comments</h2>
+<p><strong><a href="/articles/the-predictive-power-of-shot-locations-data/#134" title="2013-11-10 22:09:34">Harrison Crow</a>:</strong> It’s funny as I started outlining all the data that I have planned to collect with out keeper data those are the primary objectives that I’d like to—somewhat—establish. <span class="caps">FROM</span> and TO location of the shot, which could potentially give us the angle of the shot, and then how it was scored, left foot, right foot, header, butter, green bean, blue bean. whatever… Funny, it makes me feel confident that I had some thought a long the same lines as you.&nbsp;:)</p>
+<p><strong><a href="/articles/the-predictive-power-of-shot-locations-data/#135" title="2013-11-10 22:11:13">Matthias Kullowatz</a>:</strong> I think the ass is underused in scoring goals. Only the data can&nbsp;tell.</p>
+</section>
+        </article>
+      </div>
+    </div>
+    <footer>
+      <div class="content-wrap">
+        <div class="nav"><a href="/">« Full blog</a></div>
+        <section class="about"><p>Wintersmith is made by <a href="http://johan-nordberg.com/">Johan Nordberg</a> and licensed under the <a href="http://opensource.org/licenses/MIT">MIT-license</a>.
+This footer text can be edited in about.md</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat.</p>
+<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+dolore eu fugiat nulla pariatur.</p>
+<p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+deserunt mollit anim id est laborum.</p>
+
+        </section>
+        <section class="copy">
+          <p>&copy; 2014 USMNT &mdash; powered by&nbsp;<a href="https://github.com/jnordberg/wintersmith">Wintersmith</a>
+          </p>
+        </section>
+      </div>
+    </footer>
+  </body>
+</html>
